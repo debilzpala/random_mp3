@@ -152,7 +152,7 @@
     audio = new Audio(track.file);
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     analyser = audioCtx.createAnalyser();
-    analyser.fftSize = 128;
+    analyser.fftSize = 512;
 
     source = audioCtx.createMediaElementSource(audio);
     source.connect(analyser);
